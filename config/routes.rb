@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get 'project' => 'project#index'
+  resources :projects do
+    resources :todos
+  end
 end
